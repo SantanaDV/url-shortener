@@ -43,7 +43,7 @@ public class UrlServiceImpl implements UrlService {
     public ShortenResponse shorten(ShortenRequest request) {
         UrlMapping urlMapping = new UrlMapping();
         urlMapping.setOriginalUrl(request.url());
-        urlMapping.setHash("placeholder");
+        urlMapping.setHash("temp");
 
         // First save to get the auto-generated ID from the database
         UrlMapping saved = urlRepository.save(urlMapping);
