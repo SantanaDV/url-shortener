@@ -228,3 +228,7 @@ The API will be available at `http://localhost:8080`.
 - **MySQL in production** — replace H2 with a persistent database
 - **Rate limiting** — prevent abuse with request throttling per IP
 - **API authentication** — protect the shorten endpoint with API keys
+
+
+## 🚀 Live Demo
+https://url-shortener-production-d7cf.up.railway.app
