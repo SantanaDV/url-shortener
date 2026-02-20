@@ -19,13 +19,15 @@ import org.springframework.stereotype.Service;
 public class UrlServiceImpl implements UrlService {
 
     private final UrlRepository urlRepository;
+    private final String baseUrl;
 
-    @Value("${app.base-url}")
-    private String baseUrl;
-
-    public UrlServiceImpl(UrlRepository urlRepository) {
+    public UrlServiceImpl(UrlRepository urlRepository,
+                          @Value("${app.base-url}") String baseUrl) {
         this.urlRepository = urlRepository;
+        // Remove surrounding quotes added by some deployment platforms
+        this.baseUrl = baseUrl.replaceAll("^\"|\"$", "");
     }
+
 
     /**
      * {@inheritDoc}
