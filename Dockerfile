@@ -11,6 +11,7 @@ COPY .mvn .mvn
 COPY pom.xml .
 
 # Download dependencies (cached unless pom.xml changes)
+RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline -B
 
 # Copy source code and build the JAR
