@@ -19,7 +19,7 @@ public class Base62Encoder {
     /**
      * Encodes a numeric database ID into a short Base62 string.
      *
-     * <p>Example: {@code encode(12345)} returns {@code "3dV"}</p>
+     * <p>Example: {@code encode(12345)} returns {@code "3d7"}</p>
      *
      * @param id the auto-generated database ID (must be >= 0)
      * @return a short alphanumeric hash representing the given ID
