@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
  * </p>
  */
 @RestController
+@CrossOrigin(origins = "*")
 public class UrlController {
 
     private final UrlService urlService;
