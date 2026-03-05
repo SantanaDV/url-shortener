@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener | Simplify your links</title>
+    <meta name="description" content="A fast, simple, and elegant URL shortener to make your long links manageable.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="header">
+            <h1 class="logo">✂️ Shorty</h1>
+            <p class="subtitle">Transform your long URLs into neat, shareable links in seconds.</p>
+        </header>
+
+        <section class="shortener-card glass-panel">
+            <form id="shorten-form" class="shortener-form">
+                <div class="input-group">
+                    <input 
+                        type="url" 
+                        id="url-input" 
+                        placeholder="Paste your long URL here (e.g., https://example.com/very-long)" 
+                        required
+                        autocomplete="off"
+                    >
+                    <button type="submit" id="submit-btn" class="btn primary-btn">
+                        <span class="btn-text">Shorten</span>
+                        <span class="loader hidden"></span>
+                    </button>
+                </div>
+                <div id="error-message" class="message error-message hidden"></div>
+            </form>
+
+            <div id="result-container" class="result-container hidden">
+                <div class="result-box">
+                    <p class="result-label">Your shortened link is ready!</p>
+                    <div class="short-url-group">
+                        <a href="#" id="short-url-link" target="_blank" rel="noopener noreferrer" class="short-url-text"></a>
+                        <button id="copy-btn" class="btn secondary-btn" aria-label="Copy to clipboard">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        </button>
+                    </div>
+                    <div id="copy-notification" class="notification hidden">Copied to clipboard!</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Instant redirection with our optimized engine.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure & Reliable</h3>
+                <p>All links are encrypted and safely stored.</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📊</div>
+                <h3>Always Available</h3>
+                <p>99.9% uptime so your links never break.</p>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <p>Powered by Spring Boot & Base62 Encoding. For educational purposes.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
