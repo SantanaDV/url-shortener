@@ -33,6 +33,7 @@ GET  /{hash}       →  Looks up hash in DB  →  HTTP 302 redirect to original 
 
 ## Tech Stack
 
+### Backend
 | Layer | Technology |
 |---|---|
 | Language | Java 17 |
@@ -42,11 +43,21 @@ GET  /{hash}       →  Looks up hash in DB  →  HTTP 302 redirect to original 
 | Build Tool | Maven |
 | Containerization | Docker |
 
+### Frontend
+| Layer | Technology |
+|---|---|
+| Languages | HTML5, CSS3, JavaScript (Vanilla) |
+| Styling | Custom Glassmorphism (No Frameworks) |
+| Hosting | Vercel |
+
 ---
 
 ## Architecture
 
-The project follows a classic **layered architecture** with strict separation of concerns:
+The project consists of a decoupled frontend and backend:
+
+### Backend (Spring Boot)
+Follows a classic **layered architecture** with strict separation of concerns:
 
 ```
 ┌─────────────────────────────────────┐
@@ -175,7 +186,12 @@ The advantage of this approach: since every database ID is unique by definition,
 
 ## Project Structure
 
-```
+```text
+frontend/
+├── index.html                  # Main UI structure
+├── style.css                   # Premium Glassmorphism design
+└── script.js                   # Logic and API integration via fetch()
+
 src/
 └── main/
     ├── java/com/urlshortener/
@@ -231,4 +247,5 @@ The API will be available at `http://localhost:8080`.
 
 
 ## 🚀 Live Demo
-https://url-shortener-production-d7cf.up.railway.app
+- **Frontend (UI)**: https://url-shortener-gamma-teal.vercel.app/
+- **Backend (API)**: https://url-shortener-production-d7cf.up.railway.app
